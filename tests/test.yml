@@ -7,6 +7,5 @@
     java_packages:
       - openjdk-7-jdk
   roles:
-    - ansible-role-java
     - ansible-role-tomcat6
     - { role: ansible-role-solr }
