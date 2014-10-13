@@ -18,7 +18,7 @@ install:
 
   # Install required dependencies.
   - git clone https://github.com/fooeybartoni/ansible-role-java ../roles/ansible-role-java
-  - git clone https://github.com/fooeybartoni/ansible-role-java ../roles/ansible-role-tomcat6
+  - git clone https://github.com/fooeybartoni/ansible-role-tomcat6 ../roles/ansible-role-tomcat6
 
 script:
   # Check the role/playbook's syntax.
