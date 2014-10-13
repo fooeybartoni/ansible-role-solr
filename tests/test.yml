@@ -9,4 +9,4 @@
   roles:
     - ansible-role-java
     - ansible-role-tomcat6
-    - ansible-role-solr
+    - { role: ansible-role-solr }
