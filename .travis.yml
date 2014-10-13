@@ -22,7 +22,7 @@ install:
   - pwd
   - ls -ahl
   - git clone https://github.com/fooeybartoni/ansible-role-java ../ansible-role-java
-  - git clone https://github.com/fooeybartoni/ansible-role-tomcat6 ../ansible-role-java
+  - git clone https://github.com/fooeybartoni/ansible-role-tomcat6 ../ansible-role-tomcat6
   - cd ..
   - tree
   - cd ansible-role-solr
