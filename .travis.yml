@@ -8,6 +8,7 @@ env:
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y curl
+  - sudo apt-get install tree
 
 install:
   # Install Ansible.
@@ -17,9 +18,14 @@ install:
   - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
 
   # Install required dependencies.
+  - pwd
+  - ls -ahl
   - git clone https://github.com/fooeybartoni/ansible-role-java ../roles/ansible-role-java
   - git clone https://github.com/fooeybartoni/ansible-role-tomcat6 ../roles/ansible-role-tomcat6
-
+  - cd ..
+  - tree
+  - cd ansible-role-solr
+  
 script:
   # Check the role/playbook's syntax.
   - "ansible-playbook -i tests/inventory tests/$SITE --syntax-check"
