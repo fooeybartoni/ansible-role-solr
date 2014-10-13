@@ -7,6 +7,6 @@
     java_packages:
       - openjdk-7-jdk
   roles:
-    - geerlingguy.java
-    - geerlingguy.tomcat6
+    - ansible-role-java
+    - ansible-role-tomcat6
     - ansible-role-solr
