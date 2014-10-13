@@ -8,6 +8,10 @@ An Ansible Role that installs Apache Solr (running under Tomcat 6) on RedHat/Cen
 
 None.
 
+## Forked from DGroves
+
+Thanks Daniel.
+
 ## Role Variables
 
 Available variables are listed below, along with default values (see `vars/main.yml`):

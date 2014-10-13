@@ -1,6 +1,6 @@
 ---
 dependencies:
-  - { role: geerlingguy.tomcat6 }
+  - { role: ansible-role-tomcat6 }
 
 galaxy_info:
   author: geerlingguy

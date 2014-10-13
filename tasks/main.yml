@@ -12,6 +12,13 @@
     solr_filename=apache-solr-{{ solr_version }}
   when: "solr_version.split('.')[0] == '3'"
 
+- name: Set full download path for Solr
+  set_fact: >
+    solr_url="http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/{{ solr_filename }}.tgz"
+
+# dubug download http location
+- debug: msg="Solr being downloaded from  {{ solr_url }}"
+
 - name: Download Solr.
   get_url: >
     url=http://archive.apache.org/dist/lucene/solr/{{ solr_version }}/{{ solr_filename }}.tgz
@@ -40,6 +47,9 @@
     dest=/etc/tomcat6/Catalina/{{ tomcat6_hostname }}/solr.xml
     owner={{ tomcat_user }} group={{ tomcat_user }} mode=755
   notify: restart tomcat
+
+# dubug download http location
+- debug: msg="Solr war placed at /etc/tomcat6/Catalina/{{ tomcat6_hostname }}/solr.xml "
 
 - name: Copy Solr multicore example into place.
   command: >
